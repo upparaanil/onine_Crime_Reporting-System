@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Feedback Form{% endblock %}
+{% load static %}
+
+
+{% block content %}
+
+
+<div class="container">
+    <div class="row">
+        <h3>Feeback Application Detailes </h3>
+        <div class="col">
+
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit"  class="btn-outline-success"/>
+            </form>
+
+
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
